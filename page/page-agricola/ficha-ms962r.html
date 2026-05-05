@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../estilo/style-header.css">
+    <link rel="stylesheet" href="../../estilo/style-main.css">
+    <link rel="stylesheet" href="../../estilo/style-footer.css">
+    <link rel="stylesheet" href="../../estilo/estilo-page/style-productos.css">
+    <link rel="stylesheet" href="../../estilo/estilo-page/style-fichatec.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+<header class="encabezado-header agro-header">
+<section class="seccion-encabezado agro-section">
+
+    <nav class="nav-bar agro-nav">
+        <div class="logo-header">
+        <img class="imagen-logo" src="../../imagenes/header/Logo1.png" alt="logo">
+        <h1>Santilli Neumaticos S.A</h1>
+        </div>
+        <ul class="nav-menu agro-ul">
+            <li class="list-item agro-item"><a href="../../index.html">Home</a></li>
+            <li class="list-item agro-item"><a href="../../index.html#productos">Productos</a></li>
+            <li class="list-item  agro-item"><a href="../../index.html#servicios">Servicios</a></li>
+            <li class="list-item agro-item"><a href="#">Nosotros</a></li>
+            <li class="list-item agro-item"><a href="../../index.html#contacto">Contacto</a></li>
+            <li class="list-item cotizacion agro-item-cotizacion-btn"><a href="../../index.html#contacto">Cotización</a></li>
+        </ul>
+
+</section>
+
+</header>
+
+<main >
+   <section class="producto-container">
+
+    <!-- IMAGENES -->
+    <div class="producto-galeria fade-in">
+
+        <div class="imagen-principal">
+            <img id="imagenActiva" src="../../imagenes/productos-agro/ms-962r/maxam-tyre-ms962r.jpeg">
+        </div>
+
+        <div class="miniaturas">
+            <img src="../../imagenes/productos-agro/ms-962r/maxam-tyre-ms962r.jpeg" class="active" alt="maxam ms962R ">
+            <img src="../../imagenes/productos-agro/ms-962r/ms-962-r-2.jpeg" alt="maxam ms962R ">
+            <img src="../../imagenes/productos-agro/ms-962r/ms-962-r-1.jpeg" alt="maxam ms962R ">
+
+        </div>
+
+    </div>
+
+    <div class="producto-info fade-in delay">
+
+        <h1 id="nombreProducto">AGILXTRA MS-962R</h1>
+        <p class="subtitulo">Neumáticos de implemento de alta flotación</p>
+
+        <div class="descripcion">
+            <h3>Sobre este producto</h3>
+            <p>
+                Es un neumatico reforzado con acero para aplicaciones de remolques y cisternas agrícolas. La banda de rodadura estabilizada mediante correa proporciona una mayor duración de la banda de rodadura, alta estabilidad y alta resistencia a pinchazos y los peligros del campo. El patrón optimizado de la banda de rodadura proporciona una excelente tracción en el campo y al mismo tiempo minimiza la vibración a altas velocidades.
+            </p>
+        </div>
+
+        <ul class="beneficios">
+            <li><img src="../../imagenes/iconos/lista-de-verificacion.png" alt="check">Neumático de flotación radial con implementación I3</li>
+            <li><img src="../../imagenes/iconos/lista-de-verificacion.png" alt="check">Construcción con cinturones de acero que proporciona alta resistencia a pinchazos</li>
+            <li><img src="../../imagenes/iconos/lista-de-verificacion.png" alt="check">Diseño de banda de rodadura agresivo para alta tracción</li>
+            <li><img src="../../imagenes/iconos/lista-de-verificacion.png" alt="check">Excelente estabilidad lateral para trabajo en campo y uso en ruta</li>
+            <li><img src="../../imagenes/iconos/lista-de-verificacion.png" alt="check">Compuesto de banda de rodadura resistente al desgaste y a cortes, ideal para aplicaciones de uso mixto</li>
+        </ul>
+
+        <div class="consulta-box">
+            <p>¿Necesitás esta cubierta?</p>
+            <span>Consultá por tu medida y disponibilidad</span>
+        </div>
+
+        <button class="btn-consultar" onclick="enviarWhatsApp()">
+            Consultar por su medida
+        </button>
+
+    </div>
+
+</section>
+
+
+<section class="ficha-tecnica fade-in">
+
+    <h2 class="titulo-ficha-tec">Ficha técnica</h2>
+
+    <div class="especificacion-tecnica">
+       <img src="../../imagenes/productos-agro/ms-962r/ficha-tecnica-962r.png" alt="tabla con ficha tecnica de la ms962-r">
+    </div>
+
+</section>
+
+
+<a href="#" class="whatsapp-float" onclick="enviarWhatsApp()">
+    <img src="../../imagenes/iconos/social.png" alt="whatsapp">
+</a>
+
+</main>
+
+<footer>
+<section class="footer-container">
+
+    <section class="footer-description">
+        <div class="footer-logo">
+            <img src="../../imagenes/header/Logo1.png" alt="logo santilli neumaticos del footer">
+            <h4>Santilli Neumaticos S.A</h4>
+        </div>
+
+        <div class="footer-txt">
+            <p>Comprometidos con la seguridad de tu vehículo.</p>
+            <p>Calidad, tecnología y atención personalizada</p>
+            <p>nos definen como líderes en la región.</p>
+        </div>
+    </section>
+
+    <section class="footer-sub-nav"> 
+        <h4>Enlaces</h4>
+        <ul>
+            <li><img src="../../imagenes/icono-contacto/flecha-correcta.png" alt="flecha recta para señalar cada elemento del sub-nav"><a href="#home">Home</a></li>
+            <li><img src="../../imagenes/icono-contacto/flecha-correcta.png" alt="flecha recta para señalar cada elemento del sub-nav"><a href="#productos">Productos</a></li>
+            <li><img src="../../imagenes/icono-contacto/flecha-correcta.png" alt="flecha recta para señalar cada elemento del sub-nav"><a href="#servicios">Servicios</a></li>
+            <li><img src="../../imagenes/icono-contacto/flecha-correcta.png" alt="flecha recta para señalar cada elemento del sub-nav"><a href="">Nosotros</a></li>
+            <li><img src="../../imagenes/icono-contacto/flecha-correcta.png" alt="flecha recta para señalar cada elemento del sub-nav"><a href="#contacto">Contacto</a></li>
+        </ul>
+    </section>
+
+    <section class="footer-info-contacto">
+        <h4>Contacto</h4>
+        <ul>
+            <li><img src="../../imagenes/icono-contacto/llamar.png" alt="">Tel Casa central: 03404-481271</li>
+            <li><img src="../../imagenes/icono-contacto/pasador-de-ubicacion.png" alt="">Ubicación: Lisandro de la Torre 439, Gálvez</li>
+            <li><img src="../../imagenes/icono-contacto/llamar.png" alt="">Tel Truck Center: 3404-533825</li>
+            <li><img src="../../imagenes/icono-contacto/pasador-de-ubicacion.png" alt="">Ubicación Truck Center: Ruta 80, Gálvez</li>
+            <li><img src="../../imagenes/icono-contacto/correo-electronico.png" alt="">Email: info@santillineumaticos.com</li>
+        </ul>
+    </section>
+
+</section>
+
+<div class="footer-bottom">
+    <p>Desarrollador web Gastón Furno</p>
+    <p>Tel: 3404-491896</p>
+</div>
+
+</footer>
+
+<script src="../../javaScript/main.js"></script>
+<script src="../../javaScript/efecto-prod.js"></script>
+</body>
+</html>

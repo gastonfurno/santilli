@@ -1,0 +1,295 @@
+.encabezado-header{
+    background-image: linear-gradient(90deg,rgba(43, 43, 43, 0.664) 100%, rgba(48, 48, 48, 0.77) 0%), url(../imagenes/header/camion-fondo1.png);
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+}
+
+.agro-header {
+    background-image: linear-gradient(90deg,rgba(43, 43, 43, 0.664) 100%, rgba(48, 48, 48, 0.77) 0%), url(../imagenes/header/maxam-header.png);
+    height: 60vh;
+}
+
+.transp-header {
+    background-image:linear-gradient(90deg,rgba(43, 43, 43, 0.829) 100%, rgba(48, 48, 48, 0.77) 0%), url(../imagenes/header/header-cubiertas.png);
+    height: 60vh;
+}
+
+.hanksugi-header {
+    background-image:linear-gradient(90deg,rgba(43, 43, 43, 0.466) 100%, rgba(48, 48, 48, 0.77) 0%), url(../imagenes/header/header-hanksugi.png);
+    height: 60vh;
+}
+
+.roadx-header{
+    background-image:linear-gradient(90deg,rgba(43, 43, 43, 0.466) 100%, rgba(48, 48, 48, 0.77) 0%), url(../imagenes/header/header-roadx.png);
+    height: 60vh;
+}
+
+.sailun-header {
+    background-image:linear-gradient(90deg,rgba(43, 43, 43, 0.466) 100%, rgba(48, 48, 48, 0.77) 0%), url(../imagenes/header/header-sailun.png);
+    height: 60vh;
+}
+
+.blackhawk-header {
+    background-image:linear-gradient(90deg,rgba(43, 43, 43, 0.466) 100%, rgba(48, 48, 48, 0.77) 0%), url(../imagenes/header/header-blackhawk.png);
+    height: 60vh;
+}
+
+.seccion-encabezado {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 60px 10px;
+}
+
+/* ----- BARRA DE NAVEGACION ----- */
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    background: rgba(15, 17, 21, 0); /* transparente */
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+
+    transition: 
+        background 0.4s ease,
+        backdrop-filter 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.logo-header {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    padding: 5px;
+}
+
+.imagen-logo {
+    width: 12%;
+}
+
+.logo-header h1 {
+    font-size: 2.2rem;
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* CONTENEDOR UL */
+.nav-bar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 10px;
+    font-size: 1.1rem;
+}
+
+/* ESTADO SCROLL  */
+.nav-bar.scrolled {
+    background: rgba(15, 17, 21, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+/* LINKS */
+.list-item a{
+    position: relative;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 8px 0;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+/* UNDERLINE */
+.list-item a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: #da1e37;
+    transition: width 0.3s ease;
+}
+
+.agro-item a::after {
+    background-color: #38b000cb;
+}
+.list-item a:hover::after{
+    width: 100%;
+}
+
+.list-item a:hover{
+    color: #da1e37;
+}
+
+.agro-item a:hover{
+    color: #38b000cb;
+}
+
+/* BOTON CTA */
+.cotizacion {
+    background-color: #da1e37;
+    color: #fff;
+    border-radius: 0.5rem;
+    padding: 10px 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(218, 30, 55, 0.25);
+}
+
+.agro-item-cotizacion-btn {
+    background-color:#38b000cb;
+    box-shadow: none;
+}
+
+/* SACAR LINEA AL BOTON */
+.cotizacion a::after{
+    display: none;
+}
+
+/* HOVER CTA */
+.cotizacion:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(218, 30, 55, 0.35);
+    background-color: #c71b30;
+}
+
+.agro-item-cotizacion-btn:hover {
+box-shadow: 0 8px 10px rgba(68, 218, 30, 0.35);
+background-color: #38b000f1;
+}
+
+.cotizacion a:hover{
+    color: #fff;
+}
+
+/* CLICK */
+.cotizacion:active{
+    transform: scale(0.96);
+}
+
+/* ----- PRESENTACION -----*/
+.presentacion-header{
+    max-width: 600px;
+    width: 90%;
+    margin: 120px; 
+}
+
+.presentacion-header h2{
+    font-size: 3rem;
+    padding: 15px 0;
+    letter-spacing: 1px;
+}
+
+
+.text-presentacion{
+    font-weight: 600;
+    color: #da1e37;
+}
+
+.pres-agro{
+    color: #38b000cb;
+    letter-spacing: 1.5px;
+}
+
+.santilli-text-presentacion{
+    color: #da1e37;
+    font-weight: 900;
+}
+
+.presentacion-header p{
+    font-size: 1.2rem;
+}
+
+.contenedor-botones{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 10px 0px;
+}
+
+
+.boton-presentacion{
+    width: 25%;
+    cursor: pointer;
+    flex: 1; /* ocupan espacio proporcional */
+    min-width: 180px; /* nunca se achican demasiado */
+    max-width: 250px;
+    text-align: center;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 15px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+
+.nuestros-productos {
+    background-color: #da1e37;
+    border: 1px solid #da1e37;
+    box-shadow: 0 2px 4px rgba(218, 30, 55, 0.2);
+}
+
+.nuestros-productos a{
+    color: #fff;
+}
+
+.nuestros-productos:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(218, 30, 55, 0.35);
+}
+
+.nuestros-productos::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.3),
+        transparent
+    );
+    transition: all 0.5s;
+}
+
+.nuestros-productos:hover::after {
+    left: 100%;
+}
+
+.enviar-mensaje {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.enviar-mensaje a{
+    color: #485561;
+}
+
+.enviar-mensaje:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    background-color: #485561;
+    border-color: #485561;
+    color: #fff;
+}
+
+.enviar-mensaje a:hover {
+    color: #fff;
+}

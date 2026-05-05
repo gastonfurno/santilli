@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat';
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 50px;
+}
+
+
+/*-----MAIN-----*/
+.seccion-ventajas {
+    background-color: #181818;
+    padding: 50px;
+    color: #fff;
+}
+
+.seccion-ventajas-contenedor{
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    width: 80%;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.seccion-ventajas-contenedor img{
+    width: 20%;
+    padding-bottom: 10px;
+}
+
+.seccion-ventajas-garantia,
+ .seccion-ventajas-atencionPersonalizada, 
+ .seccion-ventajas-personalCapacitado, 
+ .seccion-ventajas-tegnologiaAvanzada, 
+ .seccion-ventajas-seguimiento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*------ SECCION CARDS ------*/
+.cards-main-catalogo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15px;
+    padding: 2%;
+    background-color: #f0f0f075;
+    letter-spacing: 3px;
+    color:#181818d8;
+}
+
+.cards-main-catalogo p {
+    color: #da1e37;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+
+.cards-catalogos{
+    display: flex;
+    justify-content: space-around;
+    height: 65vh;
+}
+
+.card-main-index-categoria {
+    display: flex;
+    margin: 30px 10px;
+    width: 33%;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    border: 1px solid #a3a3a375;
+}
+
+.card-main-index-categoria img {
+    width: 100%;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    padding-bottom: 10px;
+}
+
+.titulo-card-index, .descripcion-card-index, .btn-card-consultarMedida {
+    padding: 5px;
+    padding-bottom: 5px ;
+}
+
+.btn-card-consultarMedida a {
+    color:#da1e37;
+    font-weight: 600;
+}
+
+.btn-Turno {
+    text-align: center;  
+}
+
+.btn-agendarTurno {
+        width: 20%;
+    cursor: pointer;
+    margin: 20px 5px;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 22px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    
+    background-color: #da1e37;
+    color: #fff;
+    border: 1px solid #da1e37;
+    box-shadow: 0 2px 4px rgba(218, 30, 55, 0.2);
+
+}
+
+.btn-agendarTurno:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(218, 30, 55, 0.35);
+}
+
+
+/* ----- CONTACTO -----*/
+
+.contacto-container{
+    display:flex;
+    justify-content:space-between;
+    gap:50px;
+    padding:80px 10%;
+    background:#f4f4f4;
+}
+
+/* IZQUIERDA */
+.contacto-info{
+    width:50%;
+}
+
+.contacto-info h2{
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+.contacto-info p{
+    color:#555;
+    margin-bottom:30px;
+}
+
+/* ITEMS */
+.info-item{
+    display:flex;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.icono{
+    width:45px;
+    height:45px;
+    background:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#e21b3c;
+    font-size:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* FORM */
+.formulario{
+    width:45%;
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.formulario h3{
+    margin-bottom:20px;
+}
+
+/* INPUTS */
+.form-row{
+    display:flex;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+.form-row input{
+    width:100%;
+}
+
+input, textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    outline:none;
+}
+
+/* TEXTAREA */
+textarea{
+    height:100px;
+    resize:none;
+}
+
+/* BOTON */
+.btn-form{
+    display: flex;
+    width:80%;
+    padding:14px;
+    background:#0f1115;
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.3s;
+    justify-content: center;
+    margin: auto;
+}
+
+.btn-form:hover{
+    background:#da1e37;
+}

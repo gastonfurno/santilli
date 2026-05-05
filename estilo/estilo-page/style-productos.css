@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.contenedor-productos {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card-contenedor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 15px;
+    border: 1px solid #c5c4c456;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.card-contenedor.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease;
+}
+
+
+.card-contenedor img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-title {
+    margin: auto;
+    padding: 10px;
+}
+
+.card-title p{
+    text-align: center;
+    padding: 5px;
+    color: #3f3e3ed0;
+}
+
+.card-description {
+    width: 90%;
+    border-top: 1px solid #c5c4c456;
+    margin: auto;
+    color: #3f3e3ed0;
+}
+
+.card-description p {
+    padding: 10px 0px;
+}
+
+.card-container-btn {
+    border: none;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-enlace{
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 5px;
+}
+
+/*----- AGRO -----*/
+
+.intro-maxam {
+    width: 100%;
+    padding: 80px 0 40px 0;
+    background: #fff;
+}
+
+.intro-maxam-container {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+.intro-maxam h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #181818d3;
+    letter-spacing: 1px;
+}
+.maxam-x {
+    color: #035acc;
+    font-size: 2.5rem;
+}
+
+.intro-maxam p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.presentacion-header img{
+    width: 550px;
+    
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.agro-title h2{
+color:#38b000cb ;
+}
+
+.agro-title p, .hanksugi-title p {
+    font-weight: 600;
+}
+
+.card-enlace-agro {
+    color: #38b000cb;
+}
+
+.card-enlace-agro:hover{
+    color: #1e5e01cb;
+}
+
+.hanksugi-title, .card-enlace-hanksugi {
+    color: #da1e37;
+}
+
+.card-enlace-hanksugi:hover {
+    color: #7c0313;
+}
+
+/*---- TRANSPORTE -----*/
+
+/* ===== SECCION ===== */
+.marcas-section {
+    padding: 120px 0;
+    background: #f8f9fa;
+}
+
+/* ===== HEADER ===== */
+.marcas-header {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.marcas-header h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #1a1a1ae1;
+}
+
+.marcas-header p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.2rem;
+}
+
+/* ===== GRID ===== */
+.marcas-grid {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    align-items: center;
+}
+
+/* ===== CARD MARCA ===== */
+.marca {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+/* ===== LOGO ===== */
+.marca img {
+    max-width: 100%;
+    max-height: 90px;
+    object-fit: contain;
+
+    filter: grayscale(100%);
+    opacity: 0.7;
+
+    transition: all 0.3s ease;
+}
+
+/* ===== HOVER ===== */
+.marca:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.marca:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .marcas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .marcas-header {
+        width: 90%;
+    }
+
+    .marcas-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
