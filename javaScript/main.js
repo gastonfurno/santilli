@@ -39,6 +39,7 @@ miniaturas.forEach(img => {
 
 // WHATSAPP DINAMICO
 function enviarWhatsApp() {
+
     const producto = document.getElementById("nombreProducto").innerText;
 
     const mensaje = `Hola, quiero consultar por la cubierta ${producto}`;
@@ -47,3 +48,31 @@ function enviarWhatsApp() {
 
     window.open(url, "_blank");
 }
+
+/*------ ANIMACION DE PASO DE PAGINAS -----*/
+document.querySelectorAll("a").forEach(link => {
+
+    link.addEventListener("click", function(e){
+
+        const href = this.getAttribute("href");
+
+        // evitar anchors internos
+        if(
+            href.startsWith("#") ||
+            href.startsWith("javascript") ||
+            href === ""
+        ){
+            return;
+        }
+
+        e.preventDefault();
+
+        document.body.classList.add("fade-out");
+
+        setTimeout(() => {
+            window.location.href = href;
+        }, 300);
+
+    });
+
+});

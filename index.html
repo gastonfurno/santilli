@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./estilo/style-header.css">
     <link rel="stylesheet" href="./estilo/style-main.css">
     <link rel="stylesheet" href="./estilo/style-footer.css">
@@ -15,7 +16,7 @@
 
     <nav class="nav-bar">
         <div class="logo-header">
-        <img class="imagen-logo" src="imagenes/header/logo1.png" alt="logo">
+        <img class="imagen-logo" src="./imagenes/header/logo1.png" alt="logo">
         <h1>Santilli Neumaticos S.A</h1>
         </div>
         <ul class="nav-menu">
@@ -36,8 +37,8 @@
 <p>Lideres en neumaticos para camiones, maquinarias agricolas y autos.</p>
 <p>Especialistas en alineacion, balanceo y reparacion de vehiculos pesados y livianos</p>
     <div class="contenedor-botones">
-        <button class="boton-presentacion nuestros-productos"><a href="#productos">Productos</a></button>
-        <button class="boton-presentacion enviar-mensaje"><a href="#contacto">Escribinos</a></button>
+        <a href="#productos" class="boton-presentacion nuestros-productos">Productos</a>
+        <a href="#contacto" class="boton-presentacion enviar-mensaje">Escribinos</a>
     </div>
     
 </section>
@@ -69,8 +70,8 @@
     </section>
     
     <!------ SECCION CARDS CATALOGO ------>
-
-    <section id="productos" class="cards-main-catalogo">
+     
+    <section id="productos"  class="cards-main-catalogo">
 
                 <p class="subtitulo-catalogo-index">Nuestro Catalogo</p>
                 <h2 class="titulo-neumaticos-index">Neumaticos para cada necesidad</h2>
@@ -164,68 +165,220 @@
         </section> 
 
     <section class="btn-Turno"> <a href="">
-        <button class="btn-agendarTurno">Agenda tu turno</button>
+        <button class="btn-agendarTurno">Turnos Servicio Liviano</button>
     </a>
+    <a href="">
+    <button class="btn-agendarTurno">Turnos Servicio Pesado</button>
+    </a>
+
     </section>
-
+        
     
-    <section id="contacto" class="contacto-container">
+    <section class="contacto-sucursales">
 
-    <!-- IZQUIERDA -->
-    <div class="contacto-info">
-        <h2>Estamos para ayudarte</h2>
-        <p>Completá el formulario para solicitar un presupuesto o pedir turno.</p>
-
-        <div class="info-item">
-            <div class="icono">📍</div>
-            <div>
-                <strong>Visítanos</strong>
-                <p>Lisandro de la torre 439, Gálvez, Santa Fe</p>
-            </div>
-        </div>
-
-        <div class="info-item">
-            <div class="icono">📞</div>
-            <div>
-                <strong>Llámanos</strong>
-                <p>03404 - 481271</p>
-            </div>
-        </div>
-
-        <div class="info-item">
-            <div class="icono">⏰</div>
-            <div>
-                <strong>Horarios</strong>
-                <p>Lun a Vie: 08:00 a 17:00 hs</p>
-                
-            </div>
-        </div>
+    <!-- TITULO -->
+    <div class="titulo-contacto">
+        <h2>Contacto & Sucursales</h2>
+        <p>
+            Estamos para ayudarte. Solicita tu presupuesto o visitanos en nuestras sucursales.
+        </p>
     </div>
 
-    <!-- DERECHA -->
-    <div class="formulario">
-        <h3>Solicitar Presupuesto / Turno</h3>
+    <!-- GRID -->
+    <div class="contacto-grid">
 
-        <div class="form-row">
-            <input type="text" placeholder="Nombre">
-            <input type="text" placeholder="Apellido">
+        <!-- FORMULARIO -->
+        <div class="formulario-contacto">
+
+            <h3>Solicitar Presupuesto / Turno</h3>
+            <p>
+                Completá tus datos y nos pondremos en contacto a la brevedad.
+            </p>
+
+            <form>
+
+                <div class="input-doble">
+
+                    <div class="input-box">
+                        <label>Nombre</label>
+                        <input type="text" placeholder="Tu nombre">
+                    </div>
+
+                    <div class="input-box">
+                        <label>Apellido</label>
+                        <input type="text" placeholder="Tu apellido">
+                    </div>
+
+                </div>
+
+                <div class="input-doble">
+
+                    <div class="input-box">
+                        <label>Tu teléfono</label>
+                        <input type="text" placeholder="Ej: 342 123 4567">
+                    </div>
+
+                    <div class="input-box">
+                        <label>Email</label>
+                        <input type="email" placeholder="tu@email.com">
+                    </div>
+
+                </div>
+
+                <div class="input-doble">
+
+                    <div class="input-box">
+                        <label>Vehículo</label>
+                        <input type="text" placeholder="Marca y modelo">
+                    </div>
+
+                    <div class="input-box">
+                        <label>Medida neumático</label>
+                        <input type="text" placeholder="Ej: 205/55 R16">
+                    </div>
+
+                </div>
+
+                <div class="input-box">
+                    <label>Contanos qué necesitás...</label>
+
+                    <textarea 
+                    placeholder="Escribe tu consulta aquí...">
+                    </textarea>
+                </div>
+
+                <button type="submit">
+                    ✈ Enviar Consulta
+                </button>
+
+            </form>
+
         </div>
 
-        <div class="form-row">
-            <input type="text" placeholder="Tu teléfono">
-            <input type="email" placeholder="Email">
+        <!-- SUCURSALES -->
+        <div class="sucursales-container">
+
+            <!-- CASA CENTRAL -->
+            <div class="sucursal-card">
+
+                <div class="sucursal-header">
+
+                    <div class="info-sucursal">
+
+                        <div class="icono-sucursal">
+                            📍
+                        </div>
+
+                        <div>
+                            <h4>Casa Central</h4>
+                            <span>Lisandro de la Torre 439, Gálvez</span>
+                        </div>
+
+                    </div>
+
+                    <a 
+                        class="whatsapp-btn"
+                        href="https://wa.me/543404511031?text=Hola%20quiero%20consultar%20por%20servicio%20liviano"
+                        target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                </div>
+
+                <!-- MAPA + INFO -->
+                <div class="contenido-sucursal">
+
+                    <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4012.1503043426846!2d-61.222255700000005!3d-32.032402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b58c7d31b912d5%3A0x67f13b2d57db675f!2sSantilli%20Neum%C3%A1ticos%20SA!5e1!3m2!1ses!2sar!4v1778799766235!5m2!1ses!2sar"
+                    allowfullscreen=""
+                    loading="lazy">
+                    </iframe>
+
+                    <div class="datos-sucursal">
+
+                        <div class="dato-item">
+                            <h5>Dirección</h5>
+                            <p>Lisandro de la Torre 439</p>
+                        </div>
+
+                        <div class="dato-item">
+                            <h5>Teléfono</h5>
+                            <p>+54 3404 511031</p>
+                        </div>
+
+                        <div class="dato-item">
+                            <h5>Horario</h5>
+                            <p>Lun a Vie 8:00 a 17:00</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- TRUCK CENTER -->
+            <div class="sucursal-card">
+
+                <div class="sucursal-header">
+
+                    <div class="info-sucursal">
+
+                        <div class="icono-sucursal">
+                            🚚
+                        </div>
+
+                        <div>
+                            <h4>Truck Center</h4>
+                            <span>Ruta 80, Gálvez</span>
+                        </div>
+
+                    </div>
+
+                    <a 
+                        class="whatsapp-btn"
+                        href="https://wa.me/543404533825?text=Hola%20quiero%20consultar%20por%20servicio%20liviano"
+                        target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+
+                </div>
+
+                <!-- MAPA + INFO -->
+                <div class="contenido-sucursal">
+
+                    <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4011.9768968056624!2d-61.190101999999996!3d-32.03635980000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b58dcc28f02b3f%3A0x31be4a504eaa76c!2sTruck%20Center%20Santilli%20Neum%C3%A1ticos%20S.%20A.!5e1!3m2!1ses!2sar!4v1778799832938!5m2!1ses!2sar"
+                    allowfullscreen=""
+                    loading="lazy">
+                    </iframe>
+
+                    <div class="datos-sucursal">
+
+                        <div class="dato-item">
+                            <h5>Dirección</h5>
+                            <p>Ruta 80, Gálvez</p>
+                        </div>
+
+                        <div class="dato-item">
+                            <h5>Teléfono</h5>
+                            <p>+54 3404 533825</p>
+                        </div>
+
+                        <div class="dato-item">
+                            <h5>Horario</h5>
+                            <p>Lun a Vie 8:00 a 17:00</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
-            <div class="form-row">
-            <input type="text" placeholder="Vehículo">
-            <input type="text" placeholder="Medida neumático">
-        </div>
-
-        <textarea placeholder="Contanos qué necesitás..."></textarea>
-
-        <br><br>
-
-        <button class="btn-form">Enviar Consulta</button>
     </div>
 
 </section>
@@ -238,7 +391,7 @@
 
     <section class="footer-description">
         <div class="footer-logo">
-            <img src="imagenes/header/logo1.png" alt="logo santilli neumaticos del footer">
+            <img src="./imagenes/header/logo1.png" alt="logo santilli neumaticos del footer">
             <h4>Santilli Neumaticos S.A</h4>
         </div>
 

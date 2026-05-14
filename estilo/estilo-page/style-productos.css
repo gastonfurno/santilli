@@ -3,6 +3,23 @@
     box-sizing: border-box;
 }
 
+main{
+    opacity: 0;
+    animation: aparecerMain 0.4s ease forwards;
+}
+
+@keyframes aparecerMain{
+    from{
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .contenedor-productos {
     width: 90%;
     margin: auto;
@@ -14,12 +31,19 @@
 .card-contenedor {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin: 15px;
+    height: 100%;
     border: 1px solid #c5c4c456;
     border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(30px);
+}
+
+.card-contenedor:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
 .card-contenedor.active {
@@ -30,43 +54,61 @@
 
 
 .card-contenedor img{
+    width: 100%;
+    display: block;
+    height: 300px;
+    object-fit: contain;
+    background: #f7f7f7;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
 .card-title {
-    margin: auto;
-    padding: 10px;
+    min-height: 95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
 }
 
 .card-title p{
     text-align: center;
     padding: 5px;
     color: #3f3e3ed0;
+    font-weight: 600;
 }
 
-.card-description {
+.card-description{
     width: 90%;
-    border-top: 1px solid #c5c4c456;
     margin: auto;
-    color: #3f3e3ed0;
+    padding-bottom: 10px;
+    flex-grow: 1;
+    display: flex;
 }
 
 .card-description p {
+    line-height: 1.5;
     padding: 10px 0px;
+    font-weight: 600;
+    color: #555;
 }
 
 .card-container-btn {
-    border: none;
-    padding: 10px;
+    padding: 15px;
     display: flex;
-    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;
 }
 
 .card-enlace{
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 5px;
+    flex: 1;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.25s ease;
 }
 
 /*----- AGRO -----*/
@@ -120,16 +162,15 @@
 color:#38b000cb ;
 }
 
-.agro-title p, .hanksugi-title p {
-    font-weight: 600;
-}
 
-.card-enlace-agro {
+.card-enlace-agro{
     color: #38b000cb;
+    background-color: rgba(56,176,0,0.08);
 }
 
 .card-enlace-agro:hover{
-    color: #1e5e01cb;
+    background-color: #38b000cb;
+    color: #fff;
 }
 
 .hanksugi-title, .card-enlace-hanksugi {
@@ -140,6 +181,114 @@ color:#38b000cb ;
     color: #7c0313;
 }
 
+/*---- SAILUN -----*/
+.sailun-title {
+    color: #0054A6;
+}
+
+.card-enlace-sailun {
+    color: #0054A6;
+}
+
+/*---- BLACKHAWK -----*/
+.blackhawk-card{
+    background:
+    linear-gradient(
+    180deg,
+    #202124 0%,
+    #18191B 100%);
+
+    border:
+    1px solid rgba(255,255,255,.05);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.18);
+
+    transition: all .35s ease;
+}
+
+.blackhawk-card:hover{
+    transform: translateY(-8px);
+
+    border:
+    1px solid rgba(224,177,0,.18);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.28);
+}
+
+/* IMAGEN */
+
+.blackhawk-card img{
+    background:
+    linear-gradient(
+    180deg,
+    #efefef 0%,
+    #e4e4e4 100%);
+}
+
+/* TITULO */
+
+.blackhawk-title{
+    color: #F0F0F0;
+}
+
+.blackhawk-title h3{
+    font-size: 2rem;
+    font-weight: 800;
+
+    letter-spacing: .5px;
+}
+
+/* MODELO */
+
+.blackhawk-title p{
+    color: #E0B100;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+/* DESCRIPCION */
+
+.blackhawk-description p{
+    color: #BFC3CA;
+
+    line-height: 1.8;
+
+    font-weight: 500;
+}
+
+/* BOTONES */
+
+.card-enlace-blackhawk{
+    background-color:
+    rgba(255,255,255,.04);
+
+    color: #F1F1F1;
+
+    border:
+    1px solid rgba(255,255,255,.08);
+}
+
+/* HOVER */
+
+.card-enlace-blackhawk:hover{
+    background-color: #E0B100;
+
+    color: #111;
+
+    border:
+    1px solid #E0B100;
+
+    box-shadow:
+    0 10px 20px rgba(224,177,0,.18);
+}
 /*---- TRANSPORTE -----*/
 
 /* ===== SECCION ===== */

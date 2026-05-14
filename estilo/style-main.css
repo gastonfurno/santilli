@@ -17,10 +17,29 @@ html {
     scroll-behavior: smooth;
 }
 
-section {
-    scroll-margin-top: 50px;
+#home,
+#productos,
+#servicios,
+#contacto { 
+    scroll-margin-top: 120px;
 }
 
+main{
+    opacity: 0;
+    animation: aparecerMain 0.4s ease forwards;
+}
+
+@keyframes aparecerMain{
+    from{
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /*-----MAIN-----*/
 .seccion-ventajas {
@@ -54,6 +73,7 @@ section {
 }
 
 /*------ SECCION CARDS ------*/
+
 .cards-main-catalogo {
     display: flex;
     align-items: center;
@@ -74,24 +94,40 @@ section {
 
 .cards-catalogos{
     display: flex;
-    justify-content: space-around;
-    height: 65vh;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 40px 5%;
 }
+
 
 .card-main-index-categoria {
     display: flex;
-    margin: 30px 10px;
-    width: 33%;
     flex-direction: column;
+    width: 100%;
+    max-width: 380px;
+    min-height: 100%;
     border-radius: 0.5rem;
     border: 1px solid #a3a3a375;
+    background-color: #fff;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-.card-main-index-categoria img {
+.card-main-index-categoria:hover{
+    transform: translateY(-5px);
+}
+
+.imagen-card-index{
     width: 100%;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
-    padding-bottom: 10px;
+    overflow: hidden;
+}
+
+.imagen-card-index img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
 }
 
 .titulo-card-index, .descripcion-card-index, .btn-card-consultarMedida {
@@ -99,9 +135,44 @@ section {
     padding-bottom: 5px ;
 }
 
-.btn-card-consultarMedida a {
-    color:#da1e37;
-    font-weight: 600;
+.btn-card-consultarMedida{
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+.btn-card-consultarMedida a{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #da1e37;
+    font-weight: 700;
+    font-size: 0.95rem;
+
+    padding: 10px 16px;
+    border-radius: 0.5rem;
+
+    background-color: rgba(218, 30, 55, 0.08);
+
+    transition: all 0.25s ease;
+}
+
+
+.btn-card-consultarMedida a::after{
+    content: "→";
+    transition: transform 0.25s ease;
+}
+
+.btn-card-consultarMedida a:hover{
+    background-color: #da1e37;
+    color: #fff;
+
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(218, 30, 55, 0.2);
+}
+
+.btn-card-consultarMedida a:hover::after{
+    transform: translateX(4px);
 }
 
 .btn-Turno {
@@ -137,103 +208,312 @@ section {
 
 /* ----- CONTACTO -----*/
 
-.contacto-container{
-    display:flex;
-    justify-content:space-between;
-    gap:50px;
-    padding:80px 10%;
-    background:#f4f4f4;
+.contacto-sucursales{
+    width: 100%;
+    padding: 80px 8%;
+    background-color: #e2e2e265;
 }
 
-/* IZQUIERDA */
-.contacto-info{
-    width:50%;
+/* TITULO */
+
+.titulo-contacto{
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-.contacto-info h2{
-    font-size:2rem;
-    margin-bottom:15px;
+.titulo-contacto h2{
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #07142c;
+    margin-bottom: 12px;
 }
 
-.contacto-info p{
-    color:#555;
-    margin-bottom:30px;
+.titulo-contacto p{
+    color: #737b89;
+    font-size: 1rem;
 }
 
-/* ITEMS */
-.info-item{
-    display:flex;
-    gap:15px;
-    margin-bottom:25px;
+/* GRID */
+
+.contacto-grid{
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 30px;
+    align-items: start;
 }
 
-.icono{
-    width:45px;
-    height:45px;
-    background:#fff;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#e21b3c;
-    font-size:20px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+/* ===== FORMULARIO ===== */
+
+.formulario-contacto{
+    background: white;
+    border-radius: 22px;
+    padding: 35px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
 }
 
-/* FORM */
-.formulario{
-    width:45%;
-    background:#fff;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+.formulario-contacto h3{
+    font-size: 1.8rem;
+    color: #07142c;
+    margin-bottom: 10px;
 }
 
-.formulario h3{
-    margin-bottom:20px;
+.formulario-contacto p{
+    color: #7b8391;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
 }
 
 /* INPUTS */
-.form-row{
-    display:flex;
-    gap:15px;
-    margin-bottom:15px;
+
+.input-doble{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 18px;
 }
 
-.form-row input{
-    width:100%;
+.input-box{
+    display: flex;
+    flex-direction: column;
 }
 
-input, textarea{
-    width:100%;
-    padding:12px;
-    border:1px solid #ccc;
-    border-radius:5px;
-    outline:none;
+.input-box label{
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #1a1d25;
+    margin-bottom: 8px;
 }
 
-/* TEXTAREA */
-textarea{
-    height:100px;
-    resize:none;
+.input-box input,
+.input-box textarea{
+    border: 1px solid #d9dde4;
+    background: #fafafa;
+    border-radius: 12px;
+    padding: 15px;
+    outline: none;
+    transition: 0.3s;
+    font-size: 0.95rem;
+}
+
+.input-box input:focus,
+.input-box textarea:focus{
+    border-color: #d90429;
+    background: white;
+}
+
+.input-box textarea{
+    min-height: 150px;
+    resize: none;
+    margin-bottom: 25px;
 }
 
 /* BOTON */
-.btn-form{
-    display: flex;
-    width:80%;
-    padding:14px;
-    background:#0f1115;
-    color:#fff;
-    border:none;
-    border-radius:6px;
-    cursor:pointer;
-    font-weight:600;
-    transition:0.3s;
-    justify-content: center;
-    margin: auto;
+
+.formulario-contacto button{
+    width: 100%;
+    border: none;
+    padding: 17px;
+    border-radius: 12px;
+    background: #d90429;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.btn-form:hover{
-    background:#da1e37;
+.formulario-contacto button:hover{
+    background: #b00222;
+    transform: translateY(-2px);
+}
+
+/* ===== SUCURSALES ===== */
+
+.sucursales-container{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* CARD */
+
+.sucursal-card{
+    background: white;
+    border-radius: 22px;
+    padding: 22px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+}
+
+/* HEADER */
+
+.sucursal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.info-sucursal{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icono-sucursal{
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.info-sucursal h4{
+    font-size: 1.3rem;
+    color: #07142c;
+    margin-bottom: 5px;
+}
+
+.info-sucursal span{
+    color: #737b89;
+    font-size: 0.95rem;
+}
+
+.whatsapp-btn{
+    width: 42px;
+    height: 42px;
+    background: #25D366;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.whatsapp-btn i{
+    color: white;
+    font-size: 1.3rem;
+}
+
+.whatsapp-btn:hover{
+    transform: scale(1.08);
+    background: #1ebe5d;
+}
+
+/* MAPA + INFO */
+
+.contenido-sucursal{
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* MAPA */
+
+.contenido-sucursal iframe{
+    width: 65%;
+    height: 240px;
+    border: none;
+    border-radius: 16px;
+}
+
+/* INFO */
+
+.datos-sucursal{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+
+.dato-item{
+    background: #f7f7f7;
+    border: 1px solid #ececec;
+    border-radius: 14px;
+    padding: 15px;
+}
+
+.dato-item h5{
+    color: #d90429;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.dato-item p{
+    color: #1d222c;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width: 1100px){
+
+    .contacto-grid{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media(max-width: 750px){
+
+    .contenido-sucursal{
+        flex-direction: column;
+    }
+
+    .contenido-sucursal iframe,
+    .datos-sucursal{
+        width: 100%;
+    }
+
+}
+
+@media(max-width: 650px){
+
+    .input-doble{
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-contacto h2{
+        font-size: 2rem;
+    }
+
+    .formulario-contacto,
+    .sucursal-card{
+        padding: 25px;
+    }
+
+}
+/*----- responsiv -----*/
+
+@media (max-width: 1024px){
+
+    .cards-catalogos{
+        gap: 20px;
+    }
+
+    .card-main-index-categoria{
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .cards-catalogos{
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+    }
+
+    .card-main-index-categoria{
+        max-width: 100%;
+    }
+
+    .imagen-card-index img{
+        height: 220px;
+    }
 }

@@ -27,3 +27,55 @@ const observer = new IntersectionObserver(entries => {
 });
 
 cards.forEach(card => observer.observe(card));
+
+/*----- ANIMACION GALERIA FICHA TECNICA -----*/
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const imagenPrincipal = document.querySelector("#imagenActiva");
+    const miniaturas = document.querySelectorAll(".miniaturas img");
+
+    if(!imagenPrincipal || miniaturas.length === 0){
+        console.log("No se encontraron imágenes");
+        return;
+    }
+
+    let indiceActual = 0;
+
+    function cambiarImagen(index){
+
+    imagenPrincipal.classList.add("animar");
+
+    setTimeout(() => {
+
+        const nuevaImagen = miniaturas[index].getAttribute("src");
+
+        imagenPrincipal.setAttribute("src", nuevaImagen);
+
+        miniaturas.forEach(img => {
+            img.classList.remove("active");
+        });
+
+        miniaturas[index].classList.add("active");
+
+        imagenPrincipal.classList.remove("animar");
+
+        indiceActual = index;
+
+    }, 250);
+
+}
+
+    setInterval(() => {
+
+        indiceActual++;
+
+        if(indiceActual >= miniaturas.length){
+            indiceActual = 0;
+        }
+
+        cambiarImagen(indiceActual);
+
+    }, 3000);
+
+});
