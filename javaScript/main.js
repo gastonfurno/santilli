@@ -42,9 +42,9 @@ function enviarWhatsApp() {
 
     const producto = document.getElementById("nombreProducto").innerText;
 
-    const mensaje = `Hola, quiero consultar por la cubierta ${producto}`;
+    const mensaje = `Hola, quiero consultar por la cubierta agricola ${producto}`;
 
-    const url = `https://wa.me/543404XXXXXX?text=${encodeURIComponent(mensaje)}`;
+    const url = `https://wa.me/543404637418?text=${encodeURIComponent(mensaje)}`;
 
     window.open(url, "_blank");
 }

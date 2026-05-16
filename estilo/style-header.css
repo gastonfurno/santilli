@@ -70,6 +70,16 @@
     height: 60vh;
 }
 
+.roadx-auto-camioneta-header {
+    background-image:linear-gradient(90deg,rgba(43, 43, 43, 0.466) 100%, rgba(48, 48, 48, 0.77) 0%), url(../imagenes/header/roadx-auto.png);
+    height: 60vh;
+}
+
+.nosotros-header {
+    background-image:linear-gradient(90deg,rgba(43, 43, 43, 0.466) 100%, rgba(48, 48, 48, 0.77) 0%), url(../imagenes/header/frente-santilli.jpeg);
+    height: 60vh;
+}
+
 .seccion-encabezado {
     display: flex;
     justify-content: space-evenly;
@@ -115,7 +125,7 @@
     color: aliceblue;
     font-family: 'Times New Roman', Times, serif;
 }
-/* CONTENEDOR UL */
+
 .nav-bar ul{
     display: flex;
     justify-content: center;
@@ -125,7 +135,7 @@
     font-size: 1.1rem;
 }
 
-/* ESTADO SCROLL  */
+
 .nav-bar.scrolled {
     background: rgba(15, 17, 21, 0.75);
     backdrop-filter: blur(12px);
@@ -134,7 +144,7 @@
     box-shadow: 0 4px 20px rgba(0,0,0,0.25);
 }
 
-/* LINKS */
+
 .list-item a{
     position: relative;
     font-weight: 500;
@@ -144,7 +154,7 @@
     transition: color 0.3s ease;
 }
 
-/* UNDERLINE */
+
 .list-item a::after{
     content: "";
     position: absolute;

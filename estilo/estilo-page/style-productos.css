@@ -162,7 +162,6 @@ main{
 color:#38b000cb ;
 }
 
-
 .card-enlace-agro{
     color: #38b000cb;
     background-color: rgba(56,176,0,0.08);
@@ -173,13 +172,21 @@ color:#38b000cb ;
     color: #fff;
 }
 
-.hanksugi-title, .card-enlace-hanksugi {
+/*---- HANKSUGI -----*/
+.hanksugi-title, .roadx-title {
     color: #da1e37;
 }
 
-.card-enlace-hanksugi:hover {
-    color: #7c0313;
+.card-enlace-hanksugi, .card-enlace-roadx {
+color: #da1e37;
+background-color: rgba(218, 30, 55, 0.08);
 }
+
+.card-enlace-hanksugi:hover, .card-enlace-roadx:hover {
+    background-color: #da1e37;
+    color: #fff;
+}
+
 
 /*---- SAILUN -----*/
 .sailun-title {
@@ -190,6 +197,15 @@ color:#38b000cb ;
     color: #0054A6;
 }
 
+.card-enlace-sailun {
+    background-color: rgba(0, 84, 166, 0.08) ;
+}
+
+.card-enlace-sailun:hover {
+    background-color: #0054A6;
+    color: #F0F0F0;
+}
+
 /*---- BLACKHAWK -----*/
 .blackhawk-card{
     background:
@@ -197,31 +213,22 @@ color:#38b000cb ;
     180deg,
     #202124 0%,
     #18191B 100%);
-
     border:
     1px solid rgba(255,255,255,.05);
-
     border-radius: 18px;
-
     overflow: hidden;
-
     box-shadow:
     0 10px 25px rgba(0,0,0,.18);
-
     transition: all .35s ease;
 }
 
 .blackhawk-card:hover{
     transform: translateY(-8px);
-
     border:
     1px solid rgba(224,177,0,.18);
-
     box-shadow:
     0 20px 40px rgba(0,0,0,.28);
 }
-
-/* IMAGEN */
 
 .blackhawk-card img{
     background:
@@ -231,10 +238,9 @@ color:#38b000cb ;
     #e4e4e4 100%);
 }
 
-/* TITULO */
 
 .blackhawk-title{
-    color: #F0F0F0;
+    color: #E0B100;
 }
 
 .blackhawk-title h3{
@@ -244,34 +250,23 @@ color:#38b000cb ;
     letter-spacing: .5px;
 }
 
-/* MODELO */
-
 .blackhawk-title p{
-    color: #E0B100;
-
+    color: #F0F0F0;
     font-weight: 700;
-
     letter-spacing: 1px;
 }
 
-/* DESCRIPCION */
-
 .blackhawk-description p{
     color: #BFC3CA;
-
     line-height: 1.8;
-
     font-weight: 500;
 }
 
-/* BOTONES */
 
 .card-enlace-blackhawk{
     background-color:
     rgba(255,255,255,.04);
-
-    color: #F1F1F1;
-
+    color: #E0B100;
     border:
     1px solid rgba(255,255,255,.08);
 }
@@ -291,13 +286,12 @@ color:#38b000cb ;
 }
 /*---- TRANSPORTE -----*/
 
-/* ===== SECCION ===== */
+
 .marcas-section {
     padding: 120px 0;
     background: #f8f9fa;
 }
 
-/* ===== HEADER ===== */
 .marcas-header {
     width: 70%;
     margin: auto;
@@ -317,7 +311,6 @@ color:#38b000cb ;
     font-size: 1.2rem;
 }
 
-/* ===== GRID ===== */
 .marcas-grid {
     width: 85%;
     margin: auto;
@@ -327,7 +320,6 @@ color:#38b000cb ;
     align-items: center;
 }
 
-/* ===== CARD MARCA ===== */
 .marca {
     height: 150px;
     display: flex;
@@ -344,7 +336,7 @@ color:#38b000cb ;
     transition: all 0.3s ease;
 }
 
-/* ===== LOGO ===== */
+
 .marca img {
     max-width: 100%;
     max-height: 90px;
@@ -356,7 +348,6 @@ color:#38b000cb ;
     transition: all 0.3s ease;
 }
 
-/* ===== HOVER ===== */
 .marca:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 30px rgba(0,0,0,0.1);
@@ -368,7 +359,7 @@ color:#38b000cb ;
     transform: scale(1.05);
 }
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 1024px) {
     .marcas-grid {
         grid-template-columns: repeat(2, 1fr);

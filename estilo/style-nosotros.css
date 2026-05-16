@@ -1,0 +1,411 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: #f5f5f5;
+    color: #0f172a;
+}
+
+.nosotros{
+    width: 100%;
+}
+
+
+
+.nosotros-hero{
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.subtitulo{
+    color: #e31e24;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    position: relative;
+    padding-left: 50px;
+}
+
+.subtitulo::before{
+    content: "";
+    width: 35px;
+    height: 2px;
+    background: #e31e24;
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+.hero-texto h2{
+    font-size: 5rem;
+    line-height: 1;
+    margin: 30px 0;
+    max-width: 600px;
+}
+
+.hero-texto p{
+    color: #64748b;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 650px;
+    margin-bottom: 40px;
+}
+
+.btn-historia{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 32px;
+    background: #e31e24;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-historia:hover{
+    background: #c0171d;
+    transform: translateY(-3px);
+}
+
+.hero-imagen img{
+    width: 100%;
+    height: 720px;
+    object-fit: cover;
+}
+
+/* TRAYECTORIA */
+
+.trayectoria{
+    width: 100%;
+    padding: 100px 8%;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+}
+
+.trayectoria-izquierda h3{
+    font-size: 3.2rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.trayectoria-izquierda p{
+    color: #64748b;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+.trayectoria-derecha p{
+    color: #64748b;
+    line-height: 1.9;
+    margin-bottom: 30px;
+    font-size: 1.08rem;
+}
+
+.stats{
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 1px solid #dcdcdc;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.stat h4{
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.stat span{
+    color: #64748b;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.rojo h4{
+    color: #e31e24;
+}
+
+/* MISION */
+
+.mision-grid{
+    width: 100%;
+    padding: 80px 8%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    background: #efefef;
+}
+
+.mision-card{
+    padding: 40px;
+    border-left: 1px solid #dcdcdc;
+}
+
+.mision-card h4{
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.mision-card p,
+.mision-card li{
+    color: #64748b;
+    line-height: 1.9;
+    font-size: 1.05rem;
+}
+
+.mision-card ul{
+    padding-left: 20px;
+}
+
+.mision-card li{
+    margin-bottom: 12px;
+}
+
+/* EVENTOS */
+
+.eventos{
+    width: 100%;
+    padding: 100px 8%;
+}
+
+.eventos-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 60px;
+    gap: 40px;
+}
+
+.eventos-header h3{
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.eventos-header p{
+    color: #64748b;
+    max-width: 700px;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.eventos-header a{
+    color: #0f172a;
+    text-decoration: none;
+    border-bottom: 1px solid #0f172a;
+    padding-bottom: 8px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.eventos-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.evento-card img{
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+.evento-info span{
+    color: #e31e24;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.evento-info h4{
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+.evento-info p{
+    color: #64748b;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 1200px){
+
+    .nosotros-hero,
+    .trayectoria,
+    .mision-grid,
+    .eventos-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .hero-texto h2{
+        font-size: 4rem;
+    }
+
+}
+
+@media(max-width: 768px){
+
+    .hero-texto h2{
+        font-size: 3rem;
+    }
+
+    .trayectoria-izquierda h3,
+    .eventos-header h3{
+        font-size: 2.4rem;
+    }
+
+    .stats{
+        flex-direction: column;
+    }
+
+    .eventos-header{
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .hero-imagen img{
+        height: 500px;
+    }
+
+}
+
+/*------ CAMPAÑA BUEN DESGASTE -----*/
+
+
+
+.campana-buen-desgaste{
+    width: 100%;
+    padding: 100px 8%;
+    background: #f5f5f5;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* HEADER */
+
+.campana-header{
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.subtitulo{
+    display: inline-block;
+    font-size: .85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #da1e37;
+    margin-bottom: 20px;
+}
+
+.campana-header h2{
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.05;
+    color: #111827;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.campana-header h2 span{
+    color: #da1e37;
+}
+
+.campana-header p{
+    max-width: 750px;
+    margin: auto;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #6b7280;
+}
+
+/* GRID VIDEOS */
+
+.videos-grid{
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+}
+
+/* CARD */
+
+.video-card{
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    transition: .35s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+.video-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+}
+
+/* VIDEO */
+
+.video-container{
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+}
+
+.video-container iframe{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* INFO */
+
+.video-info{
+    padding: 28px;
+}
+
+.video-info h3{
+    font-size: 1.7rem;
+    color: #111827;
+    margin-bottom: 14px;
+    font-weight: 700;
+}
+
+.video-info p{
+    color: #6b7280;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px){
+
+    .campana-buen-desgaste{
+        padding: 80px 6%;
+    }
+
+    .campana-header h2{
+        font-size: 2.7rem;
+    }
+
+    .campana-header p{
+        font-size: 1rem;
+    }
+
+}
+
