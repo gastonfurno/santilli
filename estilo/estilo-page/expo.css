@@ -1,0 +1,289 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    background: #f4f5f7;
+    color: #111827;
+}
+
+/* SECTION */
+
+.expo-section{
+    width: 100%;
+    padding: 100px 20px;
+}
+
+/* HERO */
+
+.expo-hero{
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+.subtitulo{
+    font-size: .8rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #da1e37;
+}
+
+.expo-hero h2{
+    font-size: clamp(2.7rem, 5vw, 5rem);
+    margin-top: 15px;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.expo-hero h2 span{
+    color: #da1e37;
+}
+
+.expo-hero p{
+    max-width: 760px;
+    margin: auto;
+    color: #6b7280;
+    line-height: 1.9;
+}
+
+/* GRID */
+
+.expo-grid{
+    max-width: 1350px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* CARD */
+
+.expo-card{
+    background: white;
+    border-radius: 35px;
+    padding: 45px;
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 45px;
+    align-items: start;
+    overflow: hidden;
+    box-shadow: 0 10px 35px rgba(0,0,0,.06);
+}
+
+/* REVERSE */
+
+.expo-card.reverse{
+    grid-template-columns: 1fr 420px;
+}
+
+.expo-card.reverse .expo-info{
+    order: 2;
+}
+
+.expo-card.reverse .expo-media{
+    order: 1;
+}
+
+/* INFO */
+
+.expo-year{
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #da1e37;
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing: 1px;
+}
+
+.expo-header h3{
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.expo-info p{
+    color: #6b7280;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+/* BADGES */
+
+.expo-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.expo-tags span{
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: #f3f4f6;
+    color: #111827;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+/* MEDIA */
+
+.expo-media{
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* VIDEO */
+
+.video-box{
+    width: 100%;
+    height: 430px;
+    border-radius: 28px;
+    overflow: hidden;
+    background: #0f172a;
+    position: relative;
+}
+
+.video-box video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* GALERIA */
+
+.gallery-slider{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-track{
+    display: flex;
+    gap: 18px;
+    width: max-content;
+    animation: scrollGallery 30s linear infinite;
+}
+
+.gallery-track img{
+    width: 240px;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: .35s ease;
+    flex-shrink: 0;
+}
+
+.gallery-track img:hover{
+    transform: scale(1.04);
+}
+
+/* PAUSA */
+
+.gallery-slider:hover .gallery-track{
+    animation-play-state: paused;
+}
+
+/* ANIMACION */
+
+@keyframes scrollGallery{
+
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(-50%);
+    }
+
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.94);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: .3s ease;
+
+    z-index: 9999;
+}
+
+.lightbox.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox img{
+    width: 92%;
+    max-width: 1200px;
+    max-height: 88vh;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.close-lightbox{
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    color: white;
+    font-size: 4rem;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 1050px){
+
+    .expo-card,
+    .expo-card.reverse{
+        grid-template-columns: 1fr;
+    }
+
+    .expo-card.reverse .expo-info,
+    .expo-card.reverse .expo-media{
+        order: unset;
+    }
+
+}
+
+@media(max-width: 700px){
+
+    .expo-section{
+        padding: 70px 15px;
+    }
+
+    .expo-card{
+        padding: 25px;
+        border-radius: 25px;
+    }
+
+    .expo-header h3{
+        font-size: 2rem;
+    }
+
+    .video-box{
+        height: 260px;
+    }
+
+    .gallery-track img{
+        width: 200px;
+        height: 120px;
+    }
+
+}
